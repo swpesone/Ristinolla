@@ -4,3 +4,6 @@ Myöhemmin epätoivoista yritystä räpeltää ekan dediksen tehtäviä, reposit
 
 4.9.-14
 Paremmalla menestyksellä ekan dediksen tehtäviä. Git-ohjeet loppuun, projektin luominen NetBeansiin, tuntikirjanpidon ja aihemäärittelyn luominen.
+
+9.9.-10.9.-14
+OhJan tehtävät ja lähestyvä tentti vievät aikaa, joten vain määrittelyvaiheen luokkakaavion hahmottelua.
