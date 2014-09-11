@@ -5,5 +5,8 @@ Myöhemmin epätoivoista yritystä räpeltää ekan dediksen tehtäviä, reposit
 4.9.-14
 Paremmalla menestyksellä ekan dediksen tehtäviä. Git-ohjeet loppuun, projektin luominen NetBeansiin, tuntikirjanpidon ja aihemäärittelyn luominen.
 
-9.9.-10.9.-14
+8.9.-9.9.-14
 OhJan tehtävät ja lähestyvä tentti vievät aikaa, joten vain määrittelyvaiheen luokkakaavion hahmottelua.
+
+11.9.-14
+Ohjelmoinnin aloittaminen, luokkakaavio ja muu toisen dediksen vaatima. Viime viikon projektin siirto GitHubiin tehty nyt, sillä en sitä näköjään viime viikolla osannut oikein tehdä. Parempi myöhään kuin milloinkaan. Yhteensä nelisen tuntia työtä.
