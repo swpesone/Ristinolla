@@ -11,5 +11,10 @@ package javalabra.ristinollaprojekti;
  * @author Saara
  */
 public class Peli {
+    Ruudukko ruudut;
+    //pelaajat miten?
     
+    public Peli(int x, int y, Pelaaja pelaaja1, Pelaaja pelaaja2) {
+        this.ruudut = new Ruudukko(x,y);
+    }
 }

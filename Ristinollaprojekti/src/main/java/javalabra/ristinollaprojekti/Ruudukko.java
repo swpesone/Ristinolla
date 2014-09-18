@@ -11,32 +11,32 @@ package javalabra.ristinollaprojekti;
  */
 public class Ruudukko {
 
-    int[][] ruudut = {{0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0}};
+    Ruutu[][] ruudut;
+    int x;
+    int y;
 
-    public Ruudukko() {
-//        int[] rivi1 = ruudut[0];
-//        int[] rivi2 = ruudut[1];
-//        int[] rivi3 = ruudut[2];
-        //int ruutu = ruudut[int x][int y]; 
+    public Ruudukko(int x, int y) {
+        this.x = 3;
+        this.y = 3;
+        this.ruudut = new Ruutu[x][y];
+            for (int i = 0; i < x; i++) {
+                for (int j = 0; j < y; j++) {
+                this.ruudut[i][j] = new Ruutu(); //ruutu on aluksi 0
+            }
+        }
     }
     
+    public boolean setMerkki(int x, int y, int merkki) {
+        if (0 <= x && x < this.x && 0 <= y && y < this.y) { //miten < ja <= ?
+            return this.ruudut[x][y].setMerkki(merkki);
+        }
+        return false;
+    }
+
     public int getMerkki(int x, int y) {
-        return ruudut[x][y];
+        if (0 <= x && x < this.x && 0 <= y && y < this.y) {
+            return this.ruudut[x][y].getMerkki();
+        }
+        return 0;
     }
-
-    public void setMerkkiRistiksi(int x, int y) {
-        ruudut[x][y] = 1;
-    }
-
-    public void setMerkkiNollaksi(int x, int y) {
-        ruudut[x][y] = -1;
-    }
-
-    // diagonaali alavasemmalta ylös : (x,y), x ja y aluksi nollia, x++ ja y++
-    // diagonaali ylävasemmalta alas: (y,y), x=0 ja y=3, x++ ja y--;
-    // rivi: 
-    //sarake: 
-
 }

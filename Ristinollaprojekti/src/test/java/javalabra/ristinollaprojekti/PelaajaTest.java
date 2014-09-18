@@ -66,7 +66,7 @@ public class PelaajaTest {
 //    @Test
 //    public void setNimiToimii() {
 //        Pelaaja pelaaja3 = new Pelaaja("joku", -1);
-//        String uusiNimi = "";
-//        assertEquals("uusiNimi", pelaaja3.setNimi(uusiNimi));
+//        String nimi = "";
+//        assertEquals("", pelaaja3.setNimi(nimi));
 //    }
 }

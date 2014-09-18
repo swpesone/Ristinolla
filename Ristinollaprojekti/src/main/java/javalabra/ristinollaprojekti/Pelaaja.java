@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package javalabra.ristinollaprojekti;
 
 /**
@@ -11,28 +10,29 @@ package javalabra.ristinollaprojekti;
  * @author Saara
  */
 public class Pelaaja {
+
     String nimi;
     int merkki;
-    
+
     public Pelaaja(String nimi, int merkki) {
-        this. nimi = nimi;
+        this.nimi = "";
         this.merkki = 0;
     }
-    
-    public void setNimi(String uusiNimi) {
-        this.nimi = uusiNimi;
+
+    public void setNimi(String nimi) {
+        this.nimi = nimi;
     }
-    
-    public void setMerkki(int uusiMerkki) {
-        this.merkki = uusiMerkki;
-    }
-    
-      public String getNimi() {
+
+    public String getNimi() {
         return this.nimi;
     }
-    
+
+    public void setMerkki(int merkki) {
+        this.merkki = merkki;
+    }
+
     public int getMerkki() {
         return this.merkki;
     }
-   
+
 }

@@ -45,9 +45,9 @@ public class RuudukkoTest {
     // public void hello() {}
     
     @Test
-    public void setMerkkiRistiksiMuuttaaOikein() {
-        Ruudukko ruutu1 = new Ruudukko();
-        ruutu1.setMerkkiRistiksi(1,2);
+    public void setMerkkiMuuttaaOikein() {
+        Ruudukko ruutu1 = new Ruudukko(3,3);
+        ruutu1.setMerkki(1,2,1);
        
         assertEquals(1, ruutu1.getMerkki(1,2));
     }
