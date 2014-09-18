@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package javalabra.ristinollaprojekti;
 
 import org.junit.After;
@@ -17,23 +16,23 @@ import static org.junit.Assert.*;
  *
  * @author Saara
  */
-public class RuudukkoTest {
-    
-    public RuudukkoTest() {
+public class RuutuTest {
+
+    public RuutuTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -41,14 +40,6 @@ public class RuudukkoTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-    // @Test
-    // public void hello() {}
-    
-    @Test
-    public void setMerkkiMuuttaaOikein() {
-        Ruudukko ruudukko1 = new Ruudukko(3,3);
-        ruudukko1.setMerkki(1,2,1);
-       
-        assertEquals(1, ruudukko1.getMerkki(1,2));
-    }
+
+
 }

@@ -17,9 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author Saara
  */
-public class RuudukkoTest {
+public class PeliTest {
     
-    public RuudukkoTest() {
+    public PeliTest() {
     }
     
     @BeforeClass
@@ -41,14 +41,8 @@ public class RuudukkoTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-    // @Test
-    // public void hello() {}
-    
-    @Test
-    public void setMerkkiMuuttaaOikein() {
-        Ruudukko ruudukko1 = new Ruudukko(3,3);
-        ruudukko1.setMerkki(1,2,1);
-       
-        assertEquals(1, ruudukko1.getMerkki(1,2));
-    }
+     @Test
+     public void hello() {
+
+     }
 }

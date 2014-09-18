@@ -14,7 +14,15 @@ public class Peli {
     Ruudukko ruudut;
     //pelaajat miten?
     
-    public Peli(int x, int y, Pelaaja pelaaja1, Pelaaja pelaaja2) {
-        this.ruudut = new Ruudukko(x,y);
+    public Peli(int x, int y) {
+        this.ruudut = new Ruudukko(x, y);
+        //pelaajat?
+    }
+    
+    private void onkoVoittoa() {
+        int montako = 0;
+        int i = 1;
+        
+        
     }
 }
