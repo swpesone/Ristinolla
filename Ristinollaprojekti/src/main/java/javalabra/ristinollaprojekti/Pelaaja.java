@@ -11,7 +11,7 @@ package javalabra.ristinollaprojekti;
  */
 
 /**
- * Luokka sisältää tiedot pelaajista
+ * Luokka sisältää tiedot pelaajista (nimi ja pelimerkki)
  */
 
 public class Pelaaja {

@@ -43,14 +43,14 @@ public class RuutuTest {
     // The methods must be annotated with annotation @Test. For example:
     //
     
-    @Test
-    public void setMerkkiToimii() {
-        
-        boolean vastaus =
-
-        assertTrue(vastaus);
-        
-    }
+//    @Test
+//    public void setMerkkiToimii() {
+//        
+//        boolean vastaus =
+//
+//        assertTrue(vastaus);
+//        
+//    }
 
 
 }

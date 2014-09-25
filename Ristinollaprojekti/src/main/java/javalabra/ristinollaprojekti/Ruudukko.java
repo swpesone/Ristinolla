@@ -43,13 +43,25 @@ public class Ruudukko {
         return 0;
     }
 
+    /**
+     * Metodi kertoo tarkistaa jokaisen merkin asettamisen jälkeen, onko jollain
+     * rivillä voittoa.
+     *
+     * @param x merkin x-koordinaatti, kertoo missä kohdassa ruudukkoa merkki on
+     * leveyssuunnassa
+     *
+     * @param y merkin y-koordinaatti, kertoo missä kohdassa ruudukkoa merkki on
+     * pystysuunnass
+     *
+     * @return palauttaa false jos ei ole voittoa, true jos on voitto
+     */
     public boolean onkoVoittoa(int x, int y) {
         if (!(0 <= x && x < this.x && 0 <= y && y < this.y)) { //jos menee yli ruudukon -> false
             return false;
         }
-
+        //vaakarivi
         for (int i = 0; i < 3; i++) {
-            if (this.getMerkki(i, y) == this.getMerkki(x, y)) { //vaakarivi
+            if (this.getMerkki(i, y) == this.getMerkki(x, y)) {
                 if (i == 2) {          //jos päästään indeksin 2 samalla merkillä -> voitto
                     return true;
                 }
@@ -57,8 +69,9 @@ public class Ruudukko {
                 break;  //jos rivillä eri merkki, katkaistaan
             }
         }
+        //pystyrivi
         for (int i = 0; i < 3; i++) {
-            if (this.getMerkki(x, i) == this.getMerkki(x, y)) { //pystyrivi
+            if (this.getMerkki(x, i) == this.getMerkki(x, y)) {
                 if (i == 2) {
                     return true;
                 }
@@ -66,9 +79,9 @@ public class Ruudukko {
                 break;
             }
         }
-
+        //laskeva diagonaali 
         for (int j = 0; j < 3; j++) {
-            if (this.getMerkki(j, j) == this.getMerkki(x, y)) { //ylävas.-> alaoik. = laskeva
+            if (this.getMerkki(j, j) == this.getMerkki(x, y)) { 
                 if (j == 2) {
                     return true;
                 }
@@ -76,9 +89,9 @@ public class Ruudukko {
                 break;
             }
         }
-
+        //nouseva diagonaali
         for (int k = 2; k >= 0; k--) {
-            if (this.getMerkki(k, 2 - k) == this.getMerkki(x, y)) { //alavas.->yläoik. = nouseva
+            if (this.getMerkki(k, 2 - k) == this.getMerkki(x, y)) {
                 if (k == 0) {
                     return true;
                 }

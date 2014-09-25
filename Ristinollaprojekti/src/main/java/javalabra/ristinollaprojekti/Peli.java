@@ -12,7 +12,7 @@ package javalabra.ristinollaprojekti;
  */
 
 /**
- * Luokka 
+ * Luokka ...
  */
 
 public class Peli {
