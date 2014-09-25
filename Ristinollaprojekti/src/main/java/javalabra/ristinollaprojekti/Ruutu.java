@@ -9,6 +9,11 @@ package javalabra.ristinollaprojekti;
  *
  * @author Saara
  */
+
+/**
+ * Luokka alustaa yhden peliruudukon ruudun
+ */
+
 public class Ruutu {
 
     int merkki;

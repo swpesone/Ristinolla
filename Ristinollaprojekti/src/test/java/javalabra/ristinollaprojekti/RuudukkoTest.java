@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package javalabra.ristinollaprojekti;
 
 import org.junit.After;
@@ -18,22 +17,26 @@ import static org.junit.Assert.*;
  * @author Saara
  */
 public class RuudukkoTest {
-    
+
+    Ruudukko ruudukko1;
+
     public RuudukkoTest() {
+
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
+        ruudukko1 = new Ruudukko(3, 3);
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -43,12 +46,49 @@ public class RuudukkoTest {
     //
     // @Test
     // public void hello() {}
-    
     @Test
-    public void setMerkkiMuuttaaOikein() {
-        Ruudukko ruudukko1 = new Ruudukko(3,3);
-        ruudukko1.setMerkki(1,2,1);
-       
-        assertEquals(1, ruudukko1.getMerkki(1,2));
+    public void onkoVoittoaSarakkeessa() {
+        ruudukko1.setMerkki(0, 0, 1);
+        ruudukko1.setMerkki(0, 1, 1);
+        ruudukko1.setMerkki(0, 2, 1);
+
+        boolean vastaus = ruudukko1.onkoVoittoa(0, 1);
+
+        assertTrue(vastaus);
     }
+
+    @Test
+    public void onkoVoittoaRivilla() {
+        ruudukko1.setMerkki(0, 0, 1);
+        ruudukko1.setMerkki(1, 0, 1);
+        ruudukko1.setMerkki(2, 0, 1);
+
+        boolean vastaus = ruudukko1.onkoVoittoa(1, 0);
+
+        assertTrue(vastaus);
+    }
+
+    @Test
+    public void onkoVoittoaLaskevassaDiagonaalissa() {
+        ruudukko1.setMerkki(0, 0, 1);
+        ruudukko1.setMerkki(1, 1, 1);
+        ruudukko1.setMerkki(2, 2, 1);
+
+        boolean vastaus = ruudukko1.onkoVoittoa(2, 2);
+
+        assertTrue(vastaus);
+    }
+
+    @Test
+    public void onkoVoittoaNousevassaDiagonaalissa() {
+        ruudukko1.setMerkki(2, 0, 1);
+        ruudukko1.setMerkki(1, 1, 1);
+        ruudukko1.setMerkki(0, 2, 1);
+
+        boolean vastaus = ruudukko1.onkoVoittoa(1, 0);
+
+        assertTrue(vastaus);
+    }
+
+
 }

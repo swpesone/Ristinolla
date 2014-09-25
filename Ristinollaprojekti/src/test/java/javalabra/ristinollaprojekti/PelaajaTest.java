@@ -49,19 +49,19 @@ public class PelaajaTest {
 //     @Test
 //     public void hello() {}
      
-    @Test
-    public void getNimiAntaaOikeanNimen() {
-         Pelaaja pelaaja1 = new Pelaaja("saara", 1);
-        
-        assertEquals("saara", pelaaja1.getNimi());
-    }
+//    @Test
+//    public void getNimiAntaaOikeanNimen() {
+//         Pelaaja pelaaja1 = new Pelaaja("saara", 1);
+//        
+//        assertEquals("saara", pelaaja1.getNimi());
+//    }
     
-    @Test
-    public void getMerkkiAntaaOikeanMerkin() {
-        Pelaaja pelaaja2 = new Pelaaja("otto", 0);
-        
-        assertEquals(0, pelaaja2.getMerkki());
-    }
+//    @Test
+//    public void getMerkkiAntaaOikeanMerkin() {
+//        Pelaaja pelaaja2 = new Pelaaja("otto", 0);
+//        
+//        assertEquals(0, pelaaja2.getMerkki());
+//    }
     
 //    @Test
 //    public void setNimiToimii() {

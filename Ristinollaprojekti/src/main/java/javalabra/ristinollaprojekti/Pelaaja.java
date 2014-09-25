@@ -9,6 +9,11 @@ package javalabra.ristinollaprojekti;
  *
  * @author Saara
  */
+
+/**
+ * Luokka sisältää tiedot pelaajista
+ */
+
 public class Pelaaja {
 
     String nimi;

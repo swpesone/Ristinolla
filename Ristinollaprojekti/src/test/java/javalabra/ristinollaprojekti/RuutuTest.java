@@ -17,6 +17,7 @@ import static org.junit.Assert.*;
  * @author Saara
  */
 public class RuutuTest {
+    int merkki;
 
     public RuutuTest() {
     }
@@ -31,6 +32,7 @@ public class RuutuTest {
 
     @Before
     public void setUp() {
+        this.merkki = 0;
     }
 
     @After
@@ -40,6 +42,15 @@ public class RuutuTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
+    
+    @Test
+    public void setMerkkiToimii() {
+        
+        boolean vastaus =
+
+        assertTrue(vastaus);
+        
+    }
 
 
 }

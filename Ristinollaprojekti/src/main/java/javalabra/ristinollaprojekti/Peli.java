@@ -10,6 +10,11 @@ package javalabra.ristinollaprojekti;
  *
  * @author Saara
  */
+
+/**
+ * Luokka 
+ */
+
 public class Peli {
     Ruudukko ruudut;
     //pelaajat miten?
@@ -19,10 +24,7 @@ public class Peli {
         //pelaajat?
     }
     
-    private void onkoVoittoa() {
-        int montako = 0;
-        int i = 1;
         
         
-    }
+   
 }
