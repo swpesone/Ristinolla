@@ -49,12 +49,13 @@ public class PeliTest {
 
     @Test
     public void vaihdaVuoroVaihtaaOikein() {
-        //tee testi
+        peli1.vaihdaVuoro();
+        
     }
 
     @Test
     public void vuoroToimii() {
-        //tee testi
+        
     }
 
 }
