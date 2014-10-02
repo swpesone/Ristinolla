@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package javalabra.ristinollaprojekti;
 
 import org.junit.After;
@@ -18,22 +17,25 @@ import static org.junit.Assert.*;
  * @author Saara
  */
 public class PeliTest {
-    
+
+    Peli peli1;
+
     public PeliTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
+        peli1 = new Peli(3, 3, "eka", "toka");
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -41,8 +43,18 @@ public class PeliTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-     @Test
-     public void hello() {
+    @Test
+    public void hello() {
+    }
 
-     }
+    @Test
+    public void vaihdaVuoroVaihtaaOikein() {
+        //tee testi
+    }
+
+    @Test
+    public void vuoroToimii() {
+        //tee testi
+    }
+
 }

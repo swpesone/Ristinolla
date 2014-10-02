@@ -21,7 +21,6 @@ public class RuudukkoTest {
     Ruudukko ruudukko1;
 
     public RuudukkoTest() {
-
     }
 
     @BeforeClass
@@ -46,8 +45,6 @@ public class RuudukkoTest {
     //
     // @Test
     // public void hello() {}
-    
-    
 
     @Test 
     public void onkoVoittoaMerkkiUlkopuolellaPlus() {
@@ -133,22 +130,22 @@ public class RuudukkoTest {
         assertTrue(vastaus);
     }
     
-    // @Test
-//    public void onkoVoittoaEi() {
-//        ruudukko1.setMerkki(0, 0, 1);
-//        ruudukko1.setMerkki(1, 0, 0);
-//        ruudukko1.setMerkki(2, 0, 1);
-//        ruudukko1.setMerkki(0, 1, 1);
-//        ruudukko1.setMerkki(1, 1, 0);
-//        ruudukko1.setMerkki(2, 1, 1);
-//        ruudukko1.setMerkki(0, 2, 0);
-//        ruudukko1.setMerkki(1, 2, 1);
-//        ruudukko1.setMerkki(2, 2, 0);
-//        
-//        boolean vastaus = ruudukko1.onkoVoittoa(1,1);
-//        
-//        assertFalse(vastaus); //jotain mätää
-//    }
+     @Test
+    public void onkoVoittoaEi() {
+        ruudukko1.setMerkki(0, 0, 1);
+        ruudukko1.setMerkki(1, 0, 0);
+        ruudukko1.setMerkki(2, 0, 1);
+        ruudukko1.setMerkki(0, 1, 1);
+        ruudukko1.setMerkki(1, 1, 0);
+        ruudukko1.setMerkki(2, 1, 1);
+        ruudukko1.setMerkki(0, 2, 0);
+        ruudukko1.setMerkki(1, 2, 1);
+        ruudukko1.setMerkki(2, 2, 0);
+        
+        boolean vastaus = ruudukko1.onkoVoittoa(1,1);
+        
+        assertFalse(vastaus); //?
+    }
 
 
 }

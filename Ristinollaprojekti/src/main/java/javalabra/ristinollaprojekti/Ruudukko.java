@@ -30,7 +30,7 @@ public class Ruudukko {
     }
 
     public boolean setMerkki(int x, int y, int merkki) {
-        if (0 <= x && x < this.x && 0 <= y && y < this.y) { //miten < ja <= ?
+        if (0 <= x && x < this.x && 0 <= y && y < this.y) { 
             return this.ruudut[x][y].setMerkki(merkki);
         }
         return false;
@@ -51,7 +51,7 @@ public class Ruudukko {
      * leveyssuunnassa
      *
      * @param y merkin y-koordinaatti, kertoo missä kohdassa ruudukkoa merkki on
-     * pystysuunnass
+     * pystysuunnassa
      *
      * @return palauttaa false jos ei ole voittoa, true jos on voitto
      */
