@@ -17,3 +17,6 @@ Pienissä pätkissä yht. n. 5 h luokkakaavion täydentämistä ja koodin jatkam
 
 25.9.
 JavaDocin aloittaminen, pelin voitontarkistuslogiikan tekeminen. Lisää testejä ja perehtymistä käyttöliittymän toteuttamiseen. Yht. 4 h
+
+vko 40
+Peli-luokan pelivuoroon liittyviä metodeja, JavaDocin jatkaminen, sekvenssikaaviot ja käyttöliittymän runko. Yht +5 h
