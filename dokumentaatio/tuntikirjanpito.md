@@ -20,3 +20,6 @@ JavaDocin aloittaminen, pelin voitontarkistuslogiikan tekeminen. Lisää testej�
 
 vko 40
 Peli-luokan pelivuoroon liittyviä metodeja, JavaDocin jatkaminen, sekvenssikaaviot ja käyttöliittymän runko. Yht +5 h
+
+8.10.
+Käyttöliittymän ja tapahtumankuuntelijan korjailua ja pyörittelyä 3 h.
