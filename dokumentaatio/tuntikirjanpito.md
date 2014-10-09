@@ -23,3 +23,6 @@ Peli-luokan pelivuoroon liittyviä metodeja, JavaDocin jatkaminen, sekvenssikaav
 
 8.10.
 Käyttöliittymän ja tapahtumankuuntelijan korjailua ja pyörittelyä 3 h. Sekvenssikaavion luonnostelua n. 30 min.
+
+9.10.
+Tapahtumankuuntelijan ja käyttöliittymän rakentelua jälleen, lisäksi muiden luokkien korjailua ja hienosäätöä 2,5 h.
