@@ -9,6 +9,7 @@ package javalabra.ristinollaprojekti;
  *
  * @author Saara
  */
+import javalabra.kayttoliittyma.Kayttoliittyma;
 import javax.swing.SwingUtilities;
 
 public class Main {

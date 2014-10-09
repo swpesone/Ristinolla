@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -27,7 +28,7 @@ public class Peli {
     }
 
     /**
-     * Metodi tarkistaa, kumpi pelaaja on vuorossa ja vaihtaa sitten vuorossa 
+     * Metodi tarkistaa, kumpi pelaaja on vuorossa ja vaihtaa sitten vuorossa
      * olevan pelaajan
      */
     public void vaihdaVuoro() {
@@ -39,24 +40,32 @@ public class Peli {
     }
 
     /**
-     * Metodi käy läpi yhden vuoron ja sen aikana tarvittavat metodit: asettaa 
+     * Metodi käy läpi yhden vuoron ja sen aikana tarvittavat metodit: asettaa
      * oikean merkin, tarkistaa onko voittoa ja jos ei ole, vaihtaa vuoron. Jos
      * on voitto, peli päättyy.
-     * 
+     *
      * @param x ruudun x-koordinaatti
      * @param y ruudun y-koordinaatti
-     * @return jos peli ei pääty vuoron, palautetaan false, jos päättyy,
+     * @return jos peli ei pääty vuoroon, palautetaan false, jos päättyy,
      * palautetaan true
      */
     public boolean vuoro(int x, int y) {
-        ruudut.setMerkki(x, y, vuorossa.getMerkki());
-        if (!ruudut.onkoVoittoa(x, y)) {
-            this.vaihdaVuoro();
-            return false;
-        } else {
-            //käyttöliittymälle tieto voitosta, peli päättyy
-            return true;
+        if (this.getMerkki(x, y) == 0) {
+            System.out.println(vuorossa.getMerkki());
+            ruudut.setMerkki(x, y, vuorossa.getMerkki());
+            System.out.println(ruudut.getMerkki(x, y));
+            if (!ruudut.onkoVoittoa(x, y)) {
+                this.vaihdaVuoro();
+            } else {
+                //käyttöliittymälle tieto voitosta, peli päättyy
+                return true;
+            }
         }
+        return false;
+    }
+
+    public int getMerkki(int x, int y) {
+        return this.ruudut.getMerkki(x, y);
     }
 
 }

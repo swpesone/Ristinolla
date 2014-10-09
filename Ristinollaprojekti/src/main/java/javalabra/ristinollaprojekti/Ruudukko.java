@@ -19,8 +19,8 @@ public class Ruudukko {
     int y;
 
     public Ruudukko(int x, int y) {
-        this.x = 2;
-        this.y = 2;
+        this.x = x;
+        this.y = y;
         this.ruudut = new Ruutu[x][y];
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
@@ -29,19 +29,21 @@ public class Ruudukko {
         }
     }
 
-    public boolean setMerkki(int x, int y, int merkki) {
-        if (0 <= x && x < this.x && 0 <= y && y < this.y) { 
+  
+    public int getMerkki(int x, int y) {
+        if (0 <= x && x < this.x && 0 <= y && y < this.y) {
+            return this.ruudut[x][y].getMerkki();
+        }
+        return -2;
+    }
+    
+      public boolean setMerkki(int x, int y, int merkki) {
+        if (0 <= x && x < this.x && 0 <= y && y < this.y) {
             return this.ruudut[x][y].setMerkki(merkki);
         }
         return false;
     }
 
-    public int getMerkki(int x, int y) {
-        if (0 <= x && x < this.x && 0 <= y && y < this.y) {
-            return this.ruudut[x][y].getMerkki();
-        }
-        return 0;
-    }
 
     /**
      * Metodi kertoo tarkistaa jokaisen merkin asettamisen jälkeen, onko jollain
@@ -81,7 +83,7 @@ public class Ruudukko {
         }
         //laskeva diagonaali 
         for (int j = 0; j < 3; j++) {
-            if (this.getMerkki(j, j) == this.getMerkki(x, y)) { 
+            if (this.getMerkki(j, j) == this.getMerkki(x, y)) {
                 if (j == 2) {
                     return true;
                 }

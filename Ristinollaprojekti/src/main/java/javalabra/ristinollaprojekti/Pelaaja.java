@@ -21,7 +21,7 @@ public class Pelaaja {
 
     public Pelaaja(String nimi, int merkki) {
         this.nimi = "";
-        this.merkki = 0;
+        this.merkki = merkki;
     }
 
     public void setNimi(String nimi) {
