@@ -11,7 +11,8 @@ package javalabra.ristinollaprojekti;
  * @author Saara
  */
 /**
- * Luokka sisältää pelaajien vuoroihin liittyviä metodeja
+ * Luokka sisältää pelaajien vuoroihin liittyviä ja voitontarkistukseen 
+ * tapahtumankuuntelijassa tarvittavia  metodeja
  */
 public class Peli {
 
@@ -69,14 +70,13 @@ public class Peli {
     }
 
     /**
-     * Metodi tarkistaa, onko peli ohi eli onko ruudukossa vielä tyhjiä ruutuja,
-     * joihin ei ole asetettu merkkiä, jäljellä
-     * @return palauttaa true, jos peli on ohi ja false, jos tyhjiä ruutuja on
-     * jäljellä ja peli ei ole ohi
+     * Metodi tarkistaa, onko ruudukossa vielä tyhjiä ruutuja, joihin ei ole
+     * asetettu merkkiä, jäljellä
+     *
+     * @return palauttaa true, jos tyhjiä ruutuja ei ole jäljellä ja false, jos
+     * tyhjiä ruutuja on jäljellä
      */
-    
-    //vaihto: onkoTyhjia?
-    public boolean onkoOhi() {
+    public boolean onkoTyhjia() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (ruudut.getMerkki(i, j) == 0) {

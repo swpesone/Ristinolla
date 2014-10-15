@@ -32,16 +32,14 @@ public class Tapahtumankuuntelija implements ActionListener {
     /**
      * Metodi muuttaa pelilaudan merkit ja näyttää sopivan popup-ikkunan pelin
      * päättyessä
-     * @param ae ...
      */
     @Override
     public void actionPerformed(ActionEvent ae) {
         //jos ei ole voittoa
         if (!this.peli.vuoro(i, j)) {
             //jos peli ei ole ohi
-            if (!peli.onkoOhi()) {
+            if (!peli.onkoTyhjia()) {
                 System.out.println("nappia painettu");
-                //System.out.println(this.peli.getMerkki(i, j));
                 //peli ei pääty, vaihda napin merkki:
                 if (this.peli.getMerkki(i, j) == 1) {
                     nappi.setText("X");
@@ -72,72 +70,5 @@ public class Tapahtumankuuntelija implements ActionListener {
             nappi.repaint();
             JOptionPane.showMessageDialog(null, "Voittaja: " + peli.getMerkki(i, j) + ". pelaaja", "Peli päättyi", JOptionPane.INFORMATION_MESSAGE);
         }
-
     }
-
-//        @Override
-//    public void actionPerformed(ActionEvent ae) {
-//        ImageIcon icon = new ImageIcon(getClass().getResource("/resources/rastikuva.png"));
-//
-//        //jos ei ole voittoa
-//        if (!this.peli.vuoro(i, j)) {
-//            //jos peli ei ole ohi
-//            if (!peli.onkoOhi()) {
-//                System.out.println("nappia painettu");
-//                //System.out.println(this.peli.getMerkki(i, j));
-//                //peli ei pääty, vaihda napin merkki:
-//                if (this.peli.getMerkki(i, j) == 1) {
-//                    //nappi.setText("X");
-//                    /////////////////!!!!!
-//                    //nappi = new JButton(icon);
-//                    nappi.setIcon(icon);
-//                } else if (this.peli.getMerkki(i, j) == 2) {
-//                    nappi.setText("0");
-//                    
-//                    
-//                }
-//                nappi.repaint();
-//                //jos peli on ohi    
-//            } else {
-//                if (this.peli.getMerkki(i, j) == 1) {
-//                     //nappi.setText("X");
-//                    /////////////////!!!!!
-//                    nappi.setIcon(icon);
-//                } else if (this.peli.getMerkki(i, j) == 2) {
-//                    nappi.setText("0");
-//                    //nappi.setIcon(defaultIcon);
-//                }
-//                nappi.repaint();
-//                JOptionPane.showMessageDialog(null, "Ei voittoa", "Peli päättyi", JOptionPane.INFORMATION_MESSAGE);
-//            }
-//            //jos on voitto    
-//        } else {
-//            //peli on ohi
-//            System.out.println("nappia painettu");
-//            if (this.peli.getMerkki(i, j) == 1) {
-//                 //nappi.setText("X");
-//                    /////////////////!!!!!
-//                    nappi.setIcon(icon);
-//            } else if (this.peli.getMerkki(i, j) == 2) {
-//                nappi.setText("0");
-//            }
-//            nappi.repaint();
-//            JOptionPane.showMessageDialog(null, "Voittaja: " + peli.getMerkki(i, j) + ". pelaaja", "Peli päättyi", JOptionPane.INFORMATION_MESSAGE);
-//        }
-//
-//    }
-//
-//    /**
-//     * Returns an ImageIcon, or null if the path was invalid.
-//     */
-//    protected ImageIcon createImageIcon(String path,
-//            String description) {
-//        java.net.URL imgURL = getClass().getResource(path);
-//        if (imgURL != null) {
-//            return new ImageIcon(imgURL, description);
-//        } else {
-//            System.err.println("Couldn't find file: " + path);
-//            return null;
-//        }
-//    }
 }
