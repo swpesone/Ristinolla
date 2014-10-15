@@ -52,32 +52,31 @@ public class PeliTest {
     @Test
     public void vaihdaVuoroVaihtaaOikein() {
         peli1.vaihdaVuoro();
-        
+
     }
 
     @Test
     public void vuoroToimii() {
-        
+
     }
-    
+//
 //    @Test
 //    public void onkoOhiOn() {
 //        ruudukko1.setMerkki(0, 0, 1);
 //        ruudukko1.setMerkki(1, 0, 2);
-//        ruudukko1.setMerkki(2, 0, 1);
+//        ruudukko1.setMerkki(2, 0, );
 //        ruudukko1.setMerkki(0, 1, 1);
-//        ruudukko1.setMerkki(1, 1, 2);
-//        ruudukko1.setMerkki(2, 1, 1);
-//        ruudukko1.setMerkki(0, 2, 2);
-//        ruudukko1.setMerkki(1, 2, 1);
-//        ruudukko1.setMerkki(2, 2, 2);
+//        ruudukko1.setMerkki(1, 1, );
+//        ruudukko1.setMerkki(2, 1, );
+//        ruudukko1.setMerkki(0, 2, );
+//        ruudukko1.setMerkki(1, 2, );
+//        ruudukko1.setMerkki(2, 2, );
 //        
 //        boolean vastaus = peli1.onkoOhi();
 //        
 //        assertTrue(vastaus);
 //        
 //    }
-    
     @Test
     public void onkoOhiEi() {
         ruudukko1.setMerkki(0, 0, 0);
@@ -89,11 +88,28 @@ public class PeliTest {
         ruudukko1.setMerkki(0, 2, 2);
         ruudukko1.setMerkki(1, 2, 1);
         ruudukko1.setMerkki(2, 2, 2);
-        
+
         boolean vastaus = peli1.onkoOhi();
-        
+
         assertFalse(vastaus);
-        
+
+    }
+
+    @Test
+    public void onkoOhiTyhja() {
+        ruudukko1.setMerkki(0, 0, 0);
+        ruudukko1.setMerkki(1, 0, 0);
+        ruudukko1.setMerkki(2, 0, 0);
+        ruudukko1.setMerkki(0, 1, 0);
+        ruudukko1.setMerkki(1, 1, 0);
+        ruudukko1.setMerkki(2, 1, 0);
+        ruudukko1.setMerkki(0, 2, 0);
+        ruudukko1.setMerkki(1, 2, 0);
+        ruudukko1.setMerkki(2, 2, 0);
+
+        boolean vastaus = peli1.onkoOhi();
+
+        assertFalse(vastaus);
     }
 
 }

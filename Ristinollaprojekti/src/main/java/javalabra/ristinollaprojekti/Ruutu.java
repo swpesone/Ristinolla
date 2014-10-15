@@ -9,11 +9,9 @@ package javalabra.ristinollaprojekti;
  *
  * @author Saara
  */
-
 /**
  * Luokka alustaa yhden peliruudukon ruudun
  */
-
 public class Ruutu {
 
     int merkki;
@@ -22,8 +20,7 @@ public class Ruutu {
         this.merkki = 0;
     }
 
-    public boolean setMerkki(int merkki) {	
-        
+    public boolean setMerkki(int merkki) {
         if (this.merkki == 0) {
             this.merkki = merkki;
             return true;

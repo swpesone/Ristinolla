@@ -74,6 +74,8 @@ public class Peli {
      * @return palauttaa true, jos peli on ohi ja false, jos tyhjiä ruutuja on
      * jäljellä ja peli ei ole ohi
      */
+    
+    //vaihto: onkoTyhjia?
     public boolean onkoOhi() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {

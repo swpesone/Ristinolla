@@ -32,6 +32,7 @@ public class Tapahtumankuuntelija implements ActionListener {
     /**
      * Metodi muuttaa pelilaudan merkit ja näyttää sopivan popup-ikkunan pelin
      * päättyessä
+     * @param ae ...
      */
     @Override
     public void actionPerformed(ActionEvent ae) {
