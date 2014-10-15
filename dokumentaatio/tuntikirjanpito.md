@@ -26,3 +26,12 @@ Käyttöliittymän ja tapahtumankuuntelijan korjailua ja pyörittelyä 3 h. Sekv
 
 9.10.
 Tapahtumankuuntelijan ja käyttöliittymän rakentelua jälleen, lisäksi muiden luokkien korjailua ja hienosäätöä 2,5 h. Lisäksi sekvenssikaavion piirtäminen.
+
+12.10.
+Bugi aiheuttaa päänvaivaa, viikonloppuna useita yrityksiä yht x tuntia saada korjattua, tuloksetta. Koodikatselmointi 1 h.
+
+14.10.
+Bugi korjautuu pienellä koodinmuunnoksella, samalla kolmen eri ilmoituksen tekeminen pelin päättymisestä ja hieman lisää Javadocia sekä testejä, yht 4-5 h.
+
+15.10.
+Luokkakaavion ja sekvenssikaavioiden päivittämistä ja korjailua, kaikkien vaihtaminen uusiin. 
