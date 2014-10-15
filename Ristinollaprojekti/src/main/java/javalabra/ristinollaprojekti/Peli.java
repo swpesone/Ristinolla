@@ -23,7 +23,7 @@ public class Peli {
     public Peli(int x, int y, String nimi1, String nimi2) {
         this.ruudut = new Ruudukko(x, y);
         this.pelaaja1 = new Pelaaja(nimi1, 1);
-        this.pelaaja2 = new Pelaaja(nimi2, -1);
+        this.pelaaja2 = new Pelaaja(nimi2, 2);
         this.vuorossa = pelaaja1;
     }
 
@@ -34,7 +34,7 @@ public class Peli {
     public void vaihdaVuoro() {
         if (vuorossa.getMerkki() == 1) {
             this.vuorossa = this.pelaaja2;
-        } else if (vuorossa.getMerkki() == -1) {
+        } else if (vuorossa.getMerkki() == 2) {
             this.vuorossa = this.pelaaja1;
         }
     }
@@ -56,7 +56,7 @@ public class Peli {
             System.out.println(ruudut.getMerkki(x, y));
             if (!ruudut.onkoVoittoa(x, y)) {
                 this.vaihdaVuoro();
-            } else {
+            } else if (ruudut.onkoVoittoa(x, y)) {
                 //käyttöliittymälle tieto voitosta, peli päättyy
                 return true;
             }
@@ -67,5 +67,17 @@ public class Peli {
     public int getMerkki(int x, int y) {
         return this.ruudut.getMerkki(x, y);
     }
+    
+    public boolean onkoOhi() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (ruudut.getMerkki(i, j) == 0) {
+                    return false;
+                } 
+            } 
+        } return true;
+        
+    }
+  
 
 }

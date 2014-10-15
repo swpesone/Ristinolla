@@ -33,18 +33,18 @@ public class RuudukkoTest {
 
     @Before
     public void setUp() {
-        ruudukko1 = new Ruudukko(2, 2);
+        ruudukko1 = new Ruudukko(3, 3);
     }
 
     @After
     public void tearDown() {
     }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+//
+//     TODO add test methods here.
+//     The methods must be annotated with annotation @Test. For example:
+    
+     @Test
+     public void hello() {}
     @Test
     public void onkoVoittoaMerkkiUlkopuolellaYPlus() {
         ruudukko1.setMerkki(0, 0, 1);
@@ -111,16 +111,16 @@ public class RuudukkoTest {
         assertTrue(vastaus);
     }
 
-//    @Test
-//    public void onkoVoittoaSarakkeessa3() {
-//        ruudukko1.setMerkki(2, 0, 1);
-//        ruudukko1.setMerkki(2, 1, 1);
-//        ruudukko1.setMerkki(2, 2, 1);
-//
-//        boolean vastaus = ruudukko1.onkoVoittoa(2, 1);
-//
-//        assertTrue(vastaus);
-//    }
+    @Test
+    public void onkoVoittoaSarakkeessa3() {
+        ruudukko1.setMerkki(2, 0, 1);
+        ruudukko1.setMerkki(2, 1, 1);
+        ruudukko1.setMerkki(2, 2, 1);
+
+        boolean vastaus = ruudukko1.onkoVoittoa(2, 1);
+
+        assertTrue(vastaus);
+    }
     @Test
     public void onkoVoittoaRivilla1() {
         ruudukko1.setMerkki(0, 0, 1);
@@ -143,16 +143,16 @@ public class RuudukkoTest {
         assertTrue(vastaus);
     }
 
-//      @Test
-//    public void onkoVoittoaRivilla3() {
-//        ruudukko1.setMerkki(0, 2, 1);
-//        ruudukko1.setMerkki(1, 2, 1);
-//        ruudukko1.setMerkki(2, 2, 1);
-//
-//        boolean vastaus = ruudukko1.onkoVoittoa(1, 2);
-//
-//        assertTrue(vastaus);
-//    }
+      @Test
+    public void onkoVoittoaRivilla3() {
+        ruudukko1.setMerkki(0, 2, 1);
+        ruudukko1.setMerkki(1, 2, 1);
+        ruudukko1.setMerkki(2, 2, 1);
+
+        boolean vastaus = ruudukko1.onkoVoittoa(1, 2);
+
+        assertTrue(vastaus);
+    }
     @Test
     public void onkoVoittoaLaskevassaDiagonaalissa() {
         ruudukko1.setMerkki(0, 0, 1);
@@ -175,16 +175,16 @@ public class RuudukkoTest {
         assertTrue(vastaus);
     }
 
-////        @Test
-////    public void onkoVoittoaLaskevassaDiagonaalissaAlaoik() {
-////        ruudukko1.setMerkki(0, 0, 1);
-////        ruudukko1.setMerkki(1, 1, 1);
-////        ruudukko1.setMerkki(2, 2, 1);
-////
-////        boolean vastaus = ruudukko1.onkoVoittoa(2, 2);
-////
-////        assertTrue(vastaus);
-////    }
+        @Test
+    public void onkoVoittoaLaskevassaDiagonaalissaAlaoik() {
+        ruudukko1.setMerkki(0, 0, 1);
+        ruudukko1.setMerkki(1, 1, 1);
+        ruudukko1.setMerkki(2, 2, 1);
+
+        boolean vastaus = ruudukko1.onkoVoittoa(2, 2);
+
+        assertTrue(vastaus);
+    }
     @Test
     public void onkoVoittoaNousevassaDiagonaalissa() {
         ruudukko1.setMerkki(0, 2, 1);
@@ -196,59 +196,59 @@ public class RuudukkoTest {
         assertTrue(vastaus);
     }
 
-////    @Test
-////    public void onkoVoittoaNousevassaDiagonaalissaAlavas() {
-////        ruudukko1.setMerkki(0, 2, 1);
-////        ruudukko1.setMerkki(1, 1, 1);
-////        ruudukko1.setMerkki(2, 0, 1);
-////
-////        boolean vastaus = ruudukko1.onkoVoittoa(0, 2);
-////
-////        assertTrue(vastaus);
-////    }
+    @Test
+    public void onkoVoittoaNousevassaDiagonaalissaAlavas() {
+        ruudukko1.setMerkki(0, 2, 1);
+        ruudukko1.setMerkki(1, 1, 1);
+        ruudukko1.setMerkki(2, 0, 1);
 
-//    @Test
-//    public void onkoVoittoaNousevassaDiagonaalissaYlaoik() {
-//        ruudukko1.setMerkki(0, 2, 1);
-//        ruudukko1.setMerkki(1, 1, 1);
-//        ruudukko1.setMerkki(2, 0, 1);
-//
-//        boolean vastaus = ruudukko1.onkoVoittoa(2, 0);
-//
-//        assertTrue(vastaus);
-//    }
+        boolean vastaus = ruudukko1.onkoVoittoa(0, 2);
+
+        assertTrue(vastaus);
+    }
+
+    @Test
+    public void onkoVoittoaNousevassaDiagonaalissaYlaoik() {
+        ruudukko1.setMerkki(0, 2, 1);
+        ruudukko1.setMerkki(1, 1, 1);
+        ruudukko1.setMerkki(2, 0, 1);
+
+        boolean vastaus = ruudukko1.onkoVoittoa(2, 0);
+
+        assertTrue(vastaus);
+    }
 
     @Test
     public void onkoVoittoaOn() {
         ruudukko1.setMerkki(0, 0, 1);
-        ruudukko1.setMerkki(1, 0, 0);
+        ruudukko1.setMerkki(1, 0, 2);
         ruudukko1.setMerkki(2, 0, 1);
         ruudukko1.setMerkki(0, 1, 1);
         ruudukko1.setMerkki(1, 1, 1);
         ruudukko1.setMerkki(2, 1, 1);
-        ruudukko1.setMerkki(0, 2, 0);
+        ruudukko1.setMerkki(0, 2, 2);
         ruudukko1.setMerkki(1, 2, 1);
-        ruudukko1.setMerkki(2, 2, 0);
+        ruudukko1.setMerkki(2, 2, 2);
 
         boolean vastaus = ruudukko1.onkoVoittoa(1, 1);
 
         assertTrue(vastaus);
     }
 
-//    @Test
-//    public void onkoVoittoaEi() {
-//        ruudukko1.setMerkki(0, 0, 1);
-//        ruudukko1.setMerkki(1, 0, 0);
-//        ruudukko1.setMerkki(2, 0, 1);
-//        ruudukko1.setMerkki(0, 1, 1);
-//        ruudukko1.setMerkki(1, 1, 0);
-//        ruudukko1.setMerkki(2, 1, 1);
-//        ruudukko1.setMerkki(0, 2, 0);
-//        ruudukko1.setMerkki(1, 2, 1);
-//        ruudukko1.setMerkki(2, 2, 0);
-//
-//        boolean vastaus = ruudukko1.onkoVoittoa(1, 1);
-//
-//        assertFalse(vastaus); //?
-//    }
+    @Test
+    public void onkoVoittoaEi() {
+        ruudukko1.setMerkki(0, 0, 1);
+        ruudukko1.setMerkki(1, 0, 2);
+        ruudukko1.setMerkki(2, 0, 1);
+        ruudukko1.setMerkki(0, 1, 1);
+        ruudukko1.setMerkki(1, 1, 2);
+        ruudukko1.setMerkki(2, 1, 1);
+        ruudukko1.setMerkki(0, 2, 2);
+        ruudukko1.setMerkki(1, 2, 1);
+        ruudukko1.setMerkki(2, 2, 2);
+
+        boolean vastaus = ruudukko1.onkoVoittoa(1, 1);
+
+        assertFalse(vastaus); 
+    }
 }

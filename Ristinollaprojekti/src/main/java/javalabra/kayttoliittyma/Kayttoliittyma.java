@@ -23,7 +23,6 @@ public class Kayttoliittyma implements Runnable {
     private Peli peli;
 
     public Kayttoliittyma() {
-        
     }
 
     @Override
@@ -33,9 +32,8 @@ public class Kayttoliittyma implements Runnable {
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        this.peli = new Peli (3, 3, "nimi1",  "nimi2");
+        this.peli = new Peli(3, 3, "nimi1", "nimi2");
         luoKomponentit(frame.getContentPane());
-        
 
         frame.pack();
         frame.setVisible(true);
@@ -53,7 +51,6 @@ public class Kayttoliittyma implements Runnable {
                 napit[i][j] = nappi;
             }
         }
-        
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {

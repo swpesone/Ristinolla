@@ -23,8 +23,9 @@ public class Ruutu {
     }
 
     public boolean setMerkki(int merkki) {	
-        this.merkki = merkki;
+        
         if (this.merkki == 0) {
+            this.merkki = merkki;
             return true;
         } else {       //jos ei tyhjä ruutu -> ei voi asettaa merkkiä
             return false;
