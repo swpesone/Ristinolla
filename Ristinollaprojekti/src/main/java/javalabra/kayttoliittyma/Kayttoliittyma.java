@@ -38,7 +38,11 @@ public class Kayttoliittyma implements Runnable {
         frame.pack();
         frame.setVisible(true);
     }
-
+    
+    /**
+     * Metodi tekee 3x3-layoutin, ruutuihin JButtonit ja asettaa niille 
+     * tapahtumankuuntelijat
+     */
     private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(3, 3);
         container.setLayout(layout);

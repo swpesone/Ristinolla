@@ -29,6 +29,10 @@ public class Tapahtumankuuntelija implements ActionListener {
         this.j = j;
     }
 
+    /**
+     * Metodi muuttaa pelilaudan merkit ja näyttää sopivan popup-ikkunan pelin
+     * päättyessä
+     */
     @Override
     public void actionPerformed(ActionEvent ae) {
         //jos ei ole voittoa
@@ -50,7 +54,6 @@ public class Tapahtumankuuntelija implements ActionListener {
                     nappi.setText("X");
                 } else if (this.peli.getMerkki(i, j) == 2) {
                     nappi.setText("0");
-                    //nappi.setIcon(defaultIcon);
                 }
                 nappi.repaint();
                 JOptionPane.showMessageDialog(null, "Ei voittoa", "Peli päättyi", JOptionPane.INFORMATION_MESSAGE);
@@ -63,7 +66,7 @@ public class Tapahtumankuuntelija implements ActionListener {
                 nappi.setText("X");
             } else if (this.peli.getMerkki(i, j) == 2) {
                 nappi.setText("0");
-                
+
             }
             nappi.repaint();
             JOptionPane.showMessageDialog(null, "Voittaja: " + peli.getMerkki(i, j) + ". pelaaja", "Peli päättyi", JOptionPane.INFORMATION_MESSAGE);

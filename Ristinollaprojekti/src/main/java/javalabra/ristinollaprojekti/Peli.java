@@ -28,7 +28,7 @@ public class Peli {
     }
 
     /**
-     * Metodi tarkistaa, kumpi pelaaja on vuorossa ja vaihtaa sitten vuorossa
+     * Metodi tarkistaa, kumpi pelaaja on vuorossa, ja vaihtaa sitten vuorossa
      * olevan pelaajan
      */
     public void vaihdaVuoro() {
@@ -67,17 +67,23 @@ public class Peli {
     public int getMerkki(int x, int y) {
         return this.ruudut.getMerkki(x, y);
     }
-    
+
+    /**
+     * Metodi tarkistaa, onko peli ohi eli onko ruudukossa vielä tyhjiä ruutuja,
+     * joihin ei ole asetettu merkkiä, jäljellä
+     * @return palauttaa true, jos peli on ohi ja false, jos tyhjiä ruutuja on
+     * jäljellä ja peli ei ole ohi
+     */
     public boolean onkoOhi() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (ruudut.getMerkki(i, j) == 0) {
                     return false;
-                } 
-            } 
-        } return true;
-        
+                }
+            }
+        }
+        return true;
+
     }
-  
 
 }

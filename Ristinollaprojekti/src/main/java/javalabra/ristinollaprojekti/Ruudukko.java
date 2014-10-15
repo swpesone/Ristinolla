@@ -10,7 +10,7 @@ package javalabra.ristinollaprojekti;
  * @author Saara
  */
 /**
- * Luokka toimii ristinollapelin ruudukkona
+ * Luokka toimii ristinollapelin ruudukkona eli pelilautana
  */
 public class Ruudukko {
 
@@ -46,8 +46,8 @@ public class Ruudukko {
 
 
     /**
-     * Metodi kertoo tarkistaa jokaisen merkin asettamisen jälkeen, onko jollain
-     * rivillä voittoa.
+     * Metodi tarkistaa jokaisen merkin asettamisen jälkeen, onko jollain
+     * rivillä, sarakkeessa tai diagonaalissa voittoa.
      *
      * @param x merkin x-koordinaatti, kertoo missä kohdassa ruudukkoa merkki on
      * leveyssuunnassa
