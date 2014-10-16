@@ -29,7 +29,6 @@ public class Ruudukko {
         }
     }
 
-  
     public int getMerkki(int x, int y) {
         if (0 <= x && x < this.x && 0 <= y && y < this.y) {
             return this.ruudut[x][y].getMerkki();

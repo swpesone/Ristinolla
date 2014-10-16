@@ -45,6 +45,8 @@ public class RuudukkoTest {
     
      @Test
      public void hello() {}
+     
+     
     @Test
     public void onkoVoittoaMerkkiUlkopuolellaYPlus() {
         ruudukko1.setMerkki(0, 0, 1);

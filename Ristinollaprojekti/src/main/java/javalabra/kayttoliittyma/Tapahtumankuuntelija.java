@@ -38,7 +38,7 @@ public class Tapahtumankuuntelija implements ActionListener {
         //jos ei ole voittoa
         if (!this.peli.vuoro(i, j)) {
             //jos peli ei ole ohi
-            if (!peli.onkoTyhjia()) {
+            if (peli.onkoTyhjia()) {
                 System.out.println("nappia painettu");
                 //peli ei pääty, vaihda napin merkki:
                 if (this.peli.getMerkki(i, j) == 1) {

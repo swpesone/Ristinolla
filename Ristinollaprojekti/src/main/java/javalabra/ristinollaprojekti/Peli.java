@@ -11,8 +11,8 @@ package javalabra.ristinollaprojekti;
  * @author Saara
  */
 /**
- * Luokka sisältää pelaajien vuoroihin liittyviä ja voitontarkistukseen 
- * tapahtumankuuntelijassa tarvittavia  metodeja
+ * Luokka sisältää pelaajien vuoroihin liittyviä ja voitontarkistukseen
+ * tapahtumankuuntelijassa tarvittavia metodeja
  */
 public class Peli {
 
@@ -26,6 +26,18 @@ public class Peli {
         this.pelaaja1 = new Pelaaja(nimi1, 1);
         this.pelaaja2 = new Pelaaja(nimi2, 2);
         this.vuorossa = pelaaja1;
+    }
+    
+    public int getMerkki(int x, int y) {
+        return this.ruudut.getMerkki(x, y);
+    }
+        
+    public Ruudukko getRuudut() {
+        return this.ruudut;
+    }
+    
+    public Pelaaja getPelaaja() {
+        return this.vuorossa;
     }
 
     /**
@@ -52,9 +64,9 @@ public class Peli {
      */
     public boolean vuoro(int x, int y) {
         if (this.getMerkki(x, y) == 0) {
-            System.out.println(vuorossa.getMerkki());
+            //System.out.println(vuorossa.getMerkki());
             ruudut.setMerkki(x, y, vuorossa.getMerkki());
-            System.out.println(ruudut.getMerkki(x, y));
+            //System.out.println(ruudut.getMerkki(x, y));
             if (!ruudut.onkoVoittoa(x, y)) {
                 this.vaihdaVuoro();
             } else if (ruudut.onkoVoittoa(x, y)) {
@@ -65,27 +77,23 @@ public class Peli {
         return false;
     }
 
-    public int getMerkki(int x, int y) {
-        return this.ruudut.getMerkki(x, y);
-    }
-
     /**
      * Metodi tarkistaa, onko ruudukossa vielä tyhjiä ruutuja, joihin ei ole
      * asetettu merkkiä, jäljellä
      *
-     * @return palauttaa true, jos tyhjiä ruutuja ei ole jäljellä ja false, jos
-     * tyhjiä ruutuja on jäljellä
+     * @return palauttaa true, jos tyhjiä ruutuja on jäljellä ja false, jos
+     * tyhjiä ruutuja ei ole jäljellä
      */
     public boolean onkoTyhjia() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (ruudut.getMerkki(i, j) == 0) {
-                    return false;
+                    return true;
                 }
             }
         }
-        return true;
+        return false;
 
     }
-
+    
 }
