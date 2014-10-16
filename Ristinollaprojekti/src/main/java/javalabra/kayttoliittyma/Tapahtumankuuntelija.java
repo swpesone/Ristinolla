@@ -1,4 +1,4 @@
-/*
+   /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -30,8 +30,20 @@ public class Tapahtumankuuntelija implements ActionListener {
     }
 
     /**
-     * Metodi muuttaa pelilaudan merkit ja näyttää sopivan popup-ikkunan pelin
-     * päättyessä
+     * Metodi muuttaa pelilaudan tyhjän ruudun joko ristiksi tai nollaksi
+     */
+    public void muutaNappi() {
+        if (this.peli.getMerkki(i, j) == 1) {
+            nappi.setText("X");
+        } else if (this.peli.getMerkki(i, j) == 2) {
+            nappi.setText("0");
+        }
+        nappi.repaint();
+    }
+
+    /**
+     * Metodi muuttaa pelilaudan merkit oikeassa kohdassa ja näyttää sopivan 
+     * popup-ikkunan pelin päättyessä
      */
     @Override
     public void actionPerformed(ActionEvent ae) {
@@ -41,34 +53,20 @@ public class Tapahtumankuuntelija implements ActionListener {
             if (peli.onkoTyhjia()) {
                 System.out.println("nappia painettu");
                 //peli ei pääty, vaihda napin merkki:
-                if (this.peli.getMerkki(i, j) == 1) {
-                    nappi.setText("X");
-                } else if (this.peli.getMerkki(i, j) == 2) {
-                    nappi.setText("0");
-                }
-                nappi.repaint();
+                this.muutaNappi();
                 //jos peli on ohi    
             } else {
-                if (this.peli.getMerkki(i, j) == 1) {
-                    nappi.setText("X");
-                } else if (this.peli.getMerkki(i, j) == 2) {
-                    nappi.setText("0");
-                }
-                nappi.repaint();
-                JOptionPane.showMessageDialog(null, "Ei voittoa", "Peli päättyi", JOptionPane.INFORMATION_MESSAGE);
+                this.muutaNappi();
+                JOptionPane.showMessageDialog(null, "Ei voittoa", "Peli päättyi",
+                        JOptionPane.INFORMATION_MESSAGE);
             }
-            //jos on voitto    
+        //jos on voitto    
         } else {
             //peli on ohi
             System.out.println("nappia painettu");
-            if (this.peli.getMerkki(i, j) == 1) {
-                nappi.setText("X");
-            } else if (this.peli.getMerkki(i, j) == 2) {
-                nappi.setText("0");
-
-            }
-            nappi.repaint();
-            JOptionPane.showMessageDialog(null, "Voittaja: " + peli.getMerkki(i, j) + ". pelaaja", "Peli päättyi", JOptionPane.INFORMATION_MESSAGE);
+            this.muutaNappi();
+            JOptionPane.showMessageDialog(null, "Voittaja: " + peli.getMerkki(i, j)
+                    + ". pelaaja", "Peli päättyi", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 }

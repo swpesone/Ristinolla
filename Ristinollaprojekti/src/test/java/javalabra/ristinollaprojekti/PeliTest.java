@@ -44,9 +44,9 @@ public class PeliTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-    @Test
-    public void hello() {
-    }
+//    @Test
+//    public void hello() {
+//    }
 
     @Test
     public void vuoroEiTyhjaRuutuEiVoiAsettaa() {
@@ -81,7 +81,8 @@ public class PeliTest {
 
         assertTrue(vastaus);
     }
-     @Test
+
+    @Test
     public void vuoroTyhjaTuleeVoitto() {
         this.peli1.getRuudut().setMerkki(0, 0, 1);
         this.peli1.getRuudut().setMerkki(1, 0, 1);
@@ -100,7 +101,6 @@ public class PeliTest {
 
     @Test
     public void vaihdaVuoroVaihtaaPelaajan1() {
-        //Pelaaja vuorossa = this.peli1.pelaaja1;
         peli1.vaihdaVuoro();
 
         assertEquals(this.peli1.pelaaja2, peli1.getPelaaja());
