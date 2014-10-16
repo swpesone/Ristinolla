@@ -1,11 +1,17 @@
 **Ristinollaprojektin luokat:**
 
 -Peli
+
 -Pelaaja
+
 -Ruutu
+
 -Ruudukko
+
 -Main
+
 -Tapahtumankuuntelija
+
 -Käyttöliittymä
 
 **Peli:**
