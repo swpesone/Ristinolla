@@ -1,17 +1,25 @@
-käsin testattua:
--luokka Peli metodi vuoro(int x, int y) toimintaa välitulostuksilla
--Tapahtumankuuntelijan actionPerformed(ActionEvent ae) -metodin toimintaa välitulostuksilla ja ajamalla ohjelmaa
+Testeistä:
 
+Kohtalaisen kokemattomana jUnit-testaajana käytin usein toimintojen testaamiseen välitulostuksia ja ajoin ohjelmaa
+uudelleen ja uudelleen nähdäkseni, missä on vielä korjattavaa ja mikä toimii halutulla tavalla. Esimerkiksi Peli-luokan 
+vuoro(int x, int y)-metodia on testattu näin. Tulostin mm. getMerkki()-metodilla vuorossa olevan pelaajan merkin ja ruudussa
+olevan merkin nähdäkseni, toimiiko merkin asettaminen ruutuun.
 
-bugeja:
--jos tullut ilmoitus x:n voitosta ja sulkee popupin, klikkaamalla ruutuja tulee pelkkiä x:iä ja jokaisen jälkeen 
-ilm x:n voitosta
--jos tullut ilmoitus 0:n voitosta ja sulkee popupin, klikkaamalla ruutuja merkit vaihtelevat ja ruudun voi täyttää niin, 
-että x voittaa tai ruudut täyttyvät -> ei voittoa
--tyylikkäämpää jokin muu, esim ruutujen nollautuminen?
+Myös käyttöliittymää on testattu käsin, kuten ohjeiden mukaan tulikin toimia. Tässä välitulostukset auttoivat selvittämään 
+muutaman kiusallisen bugin. Lisäksi metodin eri osien toiminnan tarkastelu helpottui huomattavasti, samoin virheiden 
+löytäminen.
 
+Bugeista:
 
+Mainittu käyttöliittymän metodin bugi aiheutti voittorivin kolmannen merkin asettamiseen ongelman, ensimmäinen klikkaus 
+ei muuttanut merkkiä, vaan vasta toinen. Uskallan kuitenkin väittää, että tämä on nyt historiaa. 
 
+Pelin loppumiseen liittyvä kauneusvirhe asettunee jonnekin bugin ja keskeneräisyyden välimaastoon. Kun peli loppuu
+1. pelaajan (merkki X) voittoon ja sulkee popupin, klikkaamalla peliruutuja kaikki merkit muuttuvat X:ksi ja jokaisen 
+jälkeen tulee ilmoitus X:n voitosta. Kun taas peli päättyy 2. pelaajan (merkki 0) voittoon ja sulkee popupin, klikatessa
+ruudut muuttuvat vuorotellen risteiksi ja nolliksi ja peli on mahdollista lopettaa jommankumman voittoon tai tasapeliin.
+Ainakin tyylikkäämpi ratkaisu olisi jonkinlainen pelin nollautuminen aina pelin päättyessä tms. ratkaisu, joka ei jättäisi
+peliä pelattavaksi vielä voiton jälkeen.
 
 Kirjoita testausdokumentaatio
 
