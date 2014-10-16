@@ -33,7 +33,7 @@ Bugi aiheuttaa päänvaivaa, viikonloppuna useita yrityksiä yht x tuntia saada 
 Bugi korjautuu pienellä koodinmuunnoksella, samalla kolmen eri ilmoituksen tekeminen pelin päättymisestä ja hieman lisää Javadocia sekä testejä, yht 4-5 h.
 
 **15.10.**
-Luokkakaavion ja sekvenssikaavioiden päivittämistä ja korjailua, kaikkien vaihtaminen uusiin, uusi metodi. 
+Luokkakaavion ja sekvenssikaavioiden päivittämistä ja korjailua, kaikkien vaihtaminen uusiin, uusi metodi. Demopäivä. 5 h 
 
 **16.10.**
 Lisää testejä, uusia metodeja mm. tapahtumankuuntelijaan poistamaan copy-pastea, testausdokumentaation kirjoittamista, pieniä korjailuja siellä täällä kuten metodin truen ja falsen paikkojen vaihtaminen loogisemmaksi, Javadocin HTML:ksi muuttaminen ja Jar. Ohjelma itsessään toimii jo kuten haluaisin, enää tarkoitus olisi saada lisää testejä ja viimeistellä. Onhan se simppeli, mutta enpä olisi kesän alussa ensimmäistä koodiriviäni kirjoittaessa uskonut, että syksyllä saan edes tällaista aikaan! +6 h
