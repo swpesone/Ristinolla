@@ -5,8 +5,9 @@ Peli käynnistyy kun ohjelma ajetaan. Aloittava pelaaja on 1. pelaaja, jonka pel
 Jos pelaaja yrittää laittaa merkkinsä ruutuun, jossa on jo merkki, mitään ei tapahdu ja vuoro vaihtuu vasta, kun merkki on laitettu vapaaseen ruutuun. 
 
 Peli voi päättyä neljällä tavalla:
-1. Pelin voi sulkea yläkulman raksista kesken pelin.\n
-2. 2. Ristillä pelaava pelaaja voi voittaa, jolloin tulee ilmoitus "Voittaja: 1. pelaaja".
-3. 3. Nollalla pelaava pelaaja voi voittaa, jolloin tulee ilmoitus "Voittaja: 2. pelaaja".
-4. 4. Ruudukko voi täyttyä niin, että kumpikaan ei voita, jolloin tulee ilmoitus "Ei voittoa".
+1. Pelin voi sulkea yläkulman raksista kesken pelin.  
+2. Ristillä pelaava pelaaja voi voittaa, jolloin tulee ilmoitus "Voittaja: 1. pelaaja".
+3. Nollalla pelaava pelaaja voi voittaa, jolloin tulee ilmoitus "Voittaja: 2. pelaaja".
+4. Ruudukko voi täyttyä niin, että kumpikaan ei voita, jolloin tulee ilmoitus "Ei voittoa".
+
 
