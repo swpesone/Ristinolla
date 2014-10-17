@@ -1,4 +1,4 @@
-Testeistä:
+**Testeistä:**
 
 Kohtalaisen kokemattomana jUnit-testaajana käytin usein toimintojen testaamiseen välitulostuksia ja ajoin ohjelmaa
 uudelleen ja uudelleen nähdäkseni, missä on vielä korjattavaa ja mikä toimii halutulla tavalla. Esimerkiksi Peli-luokan 
@@ -10,20 +10,19 @@ löytäminen.
 
 Luokkia Pelaaja ja Ruutu en testannut, sillä niiden metodit ovat yksinkertaisia settereitä ja gettereitä.
 
-Cobertura:
-Mitkä prosentit, mikä jäi punaiseksi
+**Cobertura:**
 
-Bugeista:
+Settereitä ja gettereitä lukuun ottamatta Cobertura jäi näyttämään punaista Peli-luokassa vaihdaVuoro()-metodin else-ehdossa, useista yrityksistä huolimatta en saanut conditional coveragea yli 50 prosentin. Vuoronvaihto kuitenkin ohjelmassa toimii, joten en pitänyt tätä merkityksellisenä.
 
-Mainittu käyttöliittymän metodin bugi aiheutti voittorivin kolmannen merkin asettamiseen ongelman, ensimmäinen klikkaus 
-ei muuttanut merkkiä, vaan vasta toinen. Uskallan kuitenkin väittää, että tämä on nyt historiaa. 
+Ruudukko-luokassa niin ikään conditional coverage jäi 50 prosenttiin for-ehtojen kohdalla.
+
+**Bugeista:**
 
 Pelin loppumiseen liittyvä kauneusvirhe asettunee jonnekin bugin ja keskeneräisyyden välimaastoon. Kun peli loppuu
 1. pelaajan (merkki X) voittoon ja sulkee popupin, klikkaamalla peliruutuja kaikki merkit muuttuvat X:ksi ja jokaisen 
 jälkeen tulee ilmoitus X:n voitosta. Kun taas peli päättyy 2. pelaajan (merkki 0) voittoon ja sulkee popupin, klikatessa
 ruudut muuttuvat vuorotellen risteiksi ja nolliksi ja peli on mahdollista lopettaa jommankumman voittoon tai tasapeliin.
-Ainakin tyylikkäämpi ratkaisu olisi jonkinlainen pelin nollautuminen aina pelin päättyessä tms. ratkaisu, joka ei jättäisi
-peliä pelattavaksi vielä voiton jälkeen.
+Ainakin tyylikkäämpi ratkaisu olisi jonkinlainen pelin nollautuminen aina pelin päättyessä tms. ratkaisu, joka ei jättäisi peliä pelattavaksi vielä voiton jälkeen.
 
 Kirjoita testausdokumentaatio
 
