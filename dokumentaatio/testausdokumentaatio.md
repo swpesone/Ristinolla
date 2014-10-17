@@ -2,12 +2,13 @@ Testeistä:
 
 Kohtalaisen kokemattomana jUnit-testaajana käytin usein toimintojen testaamiseen välitulostuksia ja ajoin ohjelmaa
 uudelleen ja uudelleen nähdäkseni, missä on vielä korjattavaa ja mikä toimii halutulla tavalla. Esimerkiksi Peli-luokan 
-vuoro(int x, int y)-metodia on testattu näin. Tulostin mm. getMerkki()-metodilla vuorossa olevan pelaajan merkin ja ruudussa
-olevan merkin nähdäkseni, toimiiko merkin asettaminen ruutuun.
+vuoro(int x, int y)-metodia on testattu näin. Tulostin mm. getMerkki()-metodilla vuorossa olevan pelaajan merkin ja ruudussa olevan merkin nähdäkseni, toimiiko merkin asettaminen ruutuun.
 
 Myös käyttöliittymää on testattu käsin, kuten ohjeiden mukaan tulikin toimia. Tässä välitulostukset auttoivat selvittämään 
 muutaman kiusallisen bugin. Lisäksi metodin eri osien toiminnan tarkastelu helpottui huomattavasti, samoin virheiden 
 löytäminen.
+
+Luokkia Pelaaja ja Ruutu en testannut, sillä niiden metodit ovat yksinkertaisia settereitä ja gettereitä.
 
 Bugeista:
 
