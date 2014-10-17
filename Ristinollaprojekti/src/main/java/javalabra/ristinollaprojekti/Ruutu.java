@@ -24,7 +24,7 @@ public class Ruutu {
         if (this.merkki == 0) {
             this.merkki = merkki;
             return true;
-        } else {       //jos ei tyhjä ruutu -> ei voi asettaa merkkiä
+        } else {      
             return false;
         }
     }

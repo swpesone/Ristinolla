@@ -5,7 +5,6 @@
  */
 package javalabra.kayttoliittyma;
 
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javalabra.ristinollaprojekti.Peli;
@@ -42,7 +41,7 @@ public class Tapahtumankuuntelija implements ActionListener {
     }
 
     /**
-     * Metodi muuttaa pelilaudan merkit oikeassa kohdassa ja näyttää sopivan 
+     * Metodi muuttaa pelilaudan merkit oikeassa kohdassa ja näyttää sopivan
      * popup-ikkunan pelin päättyessä
      */
     @Override
@@ -51,7 +50,6 @@ public class Tapahtumankuuntelija implements ActionListener {
         if (!this.peli.vuoro(i, j)) {
             //jos peli ei ole ohi
             if (peli.onkoTyhjia()) {
-                System.out.println("nappia painettu");
                 //peli ei pääty, vaihda napin merkki:
                 this.muutaNappi();
                 //jos peli on ohi    
@@ -60,7 +58,7 @@ public class Tapahtumankuuntelija implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Ei voittoa", "Peli päättyi",
                         JOptionPane.INFORMATION_MESSAGE);
             }
-        //jos on voitto    
+            //jos on voitto    
         } else {
             //peli on ohi
             System.out.println("nappia painettu");

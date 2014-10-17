@@ -27,17 +27,21 @@ public class Peli {
         this.pelaaja2 = new Pelaaja(nimi2, 2);
         this.vuorossa = pelaaja1;
     }
-    
+
     public int getMerkki(int x, int y) {
         return this.ruudut.getMerkki(x, y);
     }
-        
+
     public Ruudukko getRuudut() {
         return this.ruudut;
     }
-    
+
     public Pelaaja getPelaaja() {
         return this.vuorossa;
+    }
+
+    public Pelaaja getPelaaja2() {
+        return this.pelaaja2;
     }
 
     /**
@@ -47,7 +51,7 @@ public class Peli {
     public void vaihdaVuoro() {
         if (vuorossa.getMerkki() == 1) {
             this.vuorossa = this.pelaaja2;
-        } else if (vuorossa.getMerkki() == 2) {
+        } else {
             this.vuorossa = this.pelaaja1;
         }
     }
@@ -64,12 +68,10 @@ public class Peli {
      */
     public boolean vuoro(int x, int y) {
         if (this.getMerkki(x, y) == 0) {
-            //System.out.println(vuorossa.getMerkki());
             ruudut.setMerkki(x, y, vuorossa.getMerkki());
-            //System.out.println(ruudut.getMerkki(x, y));
             if (!ruudut.onkoVoittoa(x, y)) {
                 this.vaihdaVuoro();
-            } else if (ruudut.onkoVoittoa(x, y)) {
+            } else {   
                 //käyttöliittymälle tieto voitosta, peli päättyy
                 return true;
             }
@@ -95,5 +97,5 @@ public class Peli {
         return false;
 
     }
-    
+
 }

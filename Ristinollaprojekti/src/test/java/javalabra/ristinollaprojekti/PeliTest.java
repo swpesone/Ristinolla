@@ -20,6 +20,7 @@ public class PeliTest {
 
     Peli peli1;
 
+
     public PeliTest() {
     }
 
@@ -35,6 +36,7 @@ public class PeliTest {
     public void setUp() {
         peli1 = new Peli(3, 3, "eka", "toka");
 
+
     }
 
     @After
@@ -47,6 +49,44 @@ public class PeliTest {
 //    @Test
 //    public void hello() {
 //    }
+
+    @Test
+    public void vaihdaVuoroVaihtaaPelaajanKahdesti() {
+        Pelaaja vuorossa = this.peli1.pelaaja1;
+        peli1.vaihdaVuoro();
+        peli1.vaihdaVuoro();
+        assertEquals(vuorossa, peli1.getPelaaja());
+    }
+
+    @Test
+    public void vaihdaVuoroKahdestiPelaaja1staPelaaja1een() {
+        peli1.vaihdaVuoro();
+        peli1.vaihdaVuoro();
+        assertEquals(peli1.pelaaja1, peli1.getPelaaja());
+    }
+
+    @Test
+    public void vaihdaVuoroVaihtaaPelaajan1() {
+        peli1.vaihdaVuoro();
+
+        assertEquals(this.peli1.pelaaja2, peli1.getPelaaja());
+    }
+
+    @Test
+    public void vaihdaVuoroVaihtaaPelaajan2() {
+        peli1.vuorossa = peli1.getPelaaja2();
+        peli1.vaihdaVuoro();
+
+        assertEquals(peli1.vuorossa, peli1.getPelaaja());
+    }
+
+    @Test
+    public void vaihdaVuoroVaihtaaPelaajan2Testi2() {
+        this.peli1.vuorossa = this.peli1.getPelaaja2();
+        peli1.vaihdaVuoro();
+
+        assertEquals(peli1.vuorossa, peli1.pelaaja1);
+    }
 
     @Test
     public void vuoroEiTyhjaRuutuEiVoiAsettaa() {
@@ -65,8 +105,9 @@ public class PeliTest {
         assertFalse(vastaus);
     }
 
+//   älä poista, cobertura ei tykkää
     @Test
-    public void vuoroTyhja() {
+    public void vuoroVoittoVuorossaAsettaaMerkinVoitto() {
         this.peli1.getRuudut().setMerkki(0, 0, 1);
         this.peli1.getRuudut().setMerkki(1, 0, 1);
         this.peli1.getRuudut().setMerkki(2, 0, 2);
@@ -82,8 +123,9 @@ public class PeliTest {
         assertTrue(vastaus);
     }
 
+    //oikeassa alanurkassa tyhjä, asetetaan x -> voitto
     @Test
-    public void vuoroTyhjaTuleeVoitto() {
+    public void vuoroOnkoVoittoaOn() {
         this.peli1.getRuudut().setMerkki(0, 0, 1);
         this.peli1.getRuudut().setMerkki(1, 0, 1);
         this.peli1.getRuudut().setMerkki(2, 0, 2);
@@ -92,34 +134,33 @@ public class PeliTest {
         this.peli1.getRuudut().setMerkki(2, 1, 1);
         this.peli1.getRuudut().setMerkki(0, 2, 1);
         this.peli1.getRuudut().setMerkki(1, 2, 2);
-        this.peli1.getRuudut().setMerkki(2, 2, 1);
+        this.peli1.getRuudut().setMerkki(2, 2, 0);
+
+        this.peli1.vuorossa = this.peli1.getPelaaja();
+
+        boolean vastaus = this.peli1.vuoro(2, 2);
+
+        assertTrue(vastaus);
+    }
+
+    //oik alanurkassa tyhjä, asetetaan 0 -> ei voittoa
+    @Test
+    public void vuoroOnkoVoittoaEi() {
+        this.peli1.getRuudut().setMerkki(0, 0, 1);
+        this.peli1.getRuudut().setMerkki(1, 0, 1);
+        this.peli1.getRuudut().setMerkki(2, 0, 2);
+        this.peli1.getRuudut().setMerkki(0, 1, 2);
+        this.peli1.getRuudut().setMerkki(1, 1, 1);
+        this.peli1.getRuudut().setMerkki(2, 1, 1);
+        this.peli1.getRuudut().setMerkki(0, 2, 1);
+        this.peli1.getRuudut().setMerkki(1, 2, 2);
+        this.peli1.getRuudut().setMerkki(2, 2, 0);
+
+        this.peli1.vuorossa = this.peli1.getPelaaja2();
 
         boolean vastaus = this.peli1.vuoro(2, 2);
 
         assertFalse(vastaus);
-    }
-
-    @Test
-    public void vaihdaVuoroVaihtaaPelaajan1() {
-        peli1.vaihdaVuoro();
-
-        assertEquals(this.peli1.pelaaja2, peli1.getPelaaja());
-    }
-
-    @Test
-    public void vaihdaVuoroVaihtaaPelaajanKahdesti() {
-        Pelaaja vuorossa = this.peli1.pelaaja1;
-        peli1.vaihdaVuoro();
-        peli1.vaihdaVuoro();
-        assertEquals(vuorossa, peli1.getPelaaja());
-    }
-
-    @Test
-    public void vaihdaVuoroVaihtaaPelaajan2() {
-        Pelaaja vuorossa = this.peli1.pelaaja2;
-        peli1.vaihdaVuoro();
-
-        assertEquals(vuorossa, peli1.getPelaaja());
     }
 
     @Test

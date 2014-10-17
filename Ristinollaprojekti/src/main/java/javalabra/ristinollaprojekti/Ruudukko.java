@@ -10,7 +10,7 @@ package javalabra.ristinollaprojekti;
  * @author Saara
  */
 /**
- * Luokka toimii ristinollapelin ruudukkona eli pelilautana
+ * Luokka toimii ristinollapelin pelilautana
  */
 public class Ruudukko {
 

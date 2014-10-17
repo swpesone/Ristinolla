@@ -45,8 +45,7 @@ public class RuudukkoTest {
 //    
 //     @Test
 //     public void hello() {}
-     
-     
+
     @Test
     public void onkoVoittoaMerkkiUlkopuolellaYPlus() {
         ruudukko1.setMerkki(0, 0, 1);
@@ -123,6 +122,7 @@ public class RuudukkoTest {
 
         assertTrue(vastaus);
     }
+
     @Test
     public void onkoVoittoaRivilla1() {
         ruudukko1.setMerkki(0, 0, 1);
@@ -145,7 +145,7 @@ public class RuudukkoTest {
         assertTrue(vastaus);
     }
 
-      @Test
+    @Test
     public void onkoVoittoaRivilla3() {
         ruudukko1.setMerkki(0, 2, 1);
         ruudukko1.setMerkki(1, 2, 1);
@@ -155,6 +155,7 @@ public class RuudukkoTest {
 
         assertTrue(vastaus);
     }
+
     @Test
     public void onkoVoittoaLaskevassaDiagonaalissa() {
         ruudukko1.setMerkki(0, 0, 1);
@@ -177,7 +178,7 @@ public class RuudukkoTest {
         assertTrue(vastaus);
     }
 
-        @Test
+    @Test
     public void onkoVoittoaLaskevassaDiagonaalissaAlaoik() {
         ruudukko1.setMerkki(0, 0, 1);
         ruudukko1.setMerkki(1, 1, 1);
@@ -187,6 +188,7 @@ public class RuudukkoTest {
 
         assertTrue(vastaus);
     }
+
     @Test
     public void onkoVoittoaNousevassaDiagonaalissa() {
         ruudukko1.setMerkki(0, 2, 1);
@@ -251,6 +253,21 @@ public class RuudukkoTest {
 
         boolean vastaus = ruudukko1.onkoVoittoa(1, 1);
 
-        assertFalse(vastaus); 
+        assertFalse(vastaus);
     }
+
+    @Test
+    public void getMerkkiPalauttaaOikein() {
+        ruudukko1.setMerkki(1, 1, 1);
+
+        assertEquals(1, ruudukko1.getMerkki(1, 1));
+    }
+
+    @Test
+    public void getMerkkiPalauttaaVaarillaArvoilla() {
+        ruudukko1.setMerkki(1, 1, 1);
+
+        assertEquals(-2, ruudukko1.getMerkki(-4, 5));
+    }
+   
 }
