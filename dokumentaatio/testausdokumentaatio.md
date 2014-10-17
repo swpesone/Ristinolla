@@ -10,6 +10,9 @@ löytäminen.
 
 Luokkia Pelaaja ja Ruutu en testannut, sillä niiden metodit ovat yksinkertaisia settereitä ja gettereitä.
 
+Cobertura:
+Mitkä prosentit, mikä jäi punaiseksi
+
 Bugeista:
 
 Mainittu käyttöliittymän metodin bugi aiheutti voittorivin kolmannen merkin asettamiseen ongelman, ensimmäinen klikkaus 
