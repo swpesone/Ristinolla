@@ -10,9 +10,7 @@ Luokkia Pelaaja ja Ruutu en testannut, sillä niiden metodit ovat yksinkertaisia
 
 **Cobertura:**
 
-Settereitä ja gettereitä lukuun ottamatta Cobertura jäi näyttämään punaista Peli-luokassa vaihdaVuoro()-metodin else-ehdossa, useista yrityksistä huolimatta en saanut conditional coveragea yli 50 prosentin. Vuoronvaihto kuitenkin ohjelmassa toimii, joten en pitänyt tätä merkityksellisenä.
-
-Ruudukko-luokassa niin ikään conditional coverage jäi 50 prosenttiin for-ehtojen kohdalla.
+(Settereiden ja gettereiden lisäksi) Cobertura jäi näyttämään punaista Ruudukko-luokassa, coverage jäi 50 prosenttiin for-ehtojen kohdalla. Peli-luokan vaihdaVuoro()-metodin else-ehdossa oli viime metreille saakka useista testeistä huolimatta conditional coverage 50 %, mutta se korjautui syystä tai toisesta. 
 
 **Bugeista:**
 
