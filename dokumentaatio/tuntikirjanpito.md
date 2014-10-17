@@ -37,3 +37,6 @@ Luokkakaavion ja sekvenssikaavioiden päivittämistä ja korjailua, kaikkien vai
 
 **16.10.**
 Lisää testejä, uusia metodeja mm. tapahtumankuuntelijaan poistamaan copy-pastea, testausdokumentaation kirjoittamista, pieniä korjailuja siellä täällä kuten metodin truen ja falsen paikkojen vaihtaminen loogisemmaksi, Javadocin HTML:ksi muuttaminen ja Jar. Ohjelma itsessään toimii jo kuten haluaisin, enää tarkoitus olisi saada lisää testejä ja viimeistellä. Onhan se simppeli, mutta enpä olisi kesän alussa ensimmäistä koodiriviäni kirjoittaessa uskonut, että syksyllä saan edes tällaista aikaan! +6 h
+
+**17.10.**
+Loput testit, joitain korjailuja sekä hienosäätöä kuten tarpeettoman else if -ehdon muuttaminen elseksi ja joitain uudelleennimeämisiä. Testausdokumentaation kirjoittaminen loppuun ja muun tarvittavan (Javadoc, Cobertura, Jar-tiedosto) tekeminen. Kuumeista ohjelman testailua, ettei mikään ole viime metreillä hajonnut. 7 h
